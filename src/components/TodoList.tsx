@@ -13,6 +13,15 @@ const TodoList: FC<TodoListProps> = ({
   toggleHandler,
   removeHandler,
 }) => {
+  if (todos.length === 0) {
+    return <p className="center">Work is undefined yet!</p>;
+  }
+
+  const onRemove = (e: React.MouseEvent, id: number) => {
+    e.preventDefault()
+    removeHandler(id);
+  };
+
   return (
     <ul>
       {todos.map((todo) => {
@@ -32,7 +41,7 @@ const TodoList: FC<TodoListProps> = ({
               <span>{todo.title}</span>
               <i
                 className="material-icons red-text"
-                onClick={() => removeHandler(todo.id)}
+                onClick={(e) => onRemove(e, todo.id)}
               >
                 delete
               </i>

@@ -30,7 +30,10 @@ const App: FC = () => {
   };
 
   const removeHandler = (id: number) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    const removeElement = window.confirm("Do you want to delete this element?");
+    if (removeElement) {
+      setTodos((prev) => prev.filter((todo) => todo.id !== id));
+    }
   };
 
   return (
