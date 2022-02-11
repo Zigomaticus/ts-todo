@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar: FC = () => {
   return (
@@ -9,10 +10,10 @@ const Navbar: FC = () => {
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a href="/">Todo list</a>
+            <Link to="/">Todo list</Link>
           </li>
           <li>
-            <a href="/">Informatios</a>
+            <Link to="/about">Informatios</Link>
           </li>
         </ul>
       </div>
