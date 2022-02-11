@@ -5,9 +5,9 @@ const Navbar: FC = () => {
   return (
     <nav>
       <div className="nav-wrapper purple darken-2 px1">
-        <a href="/" className="brand-logo">
+        <Link to="/" className="brand-logo">
           React + Typescript
-        </a>
+        </Link>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <Link to="/">Todo list</Link>
